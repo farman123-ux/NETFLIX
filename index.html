@@ -3,119 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NETFLIX</title>
+    <title>Netflix Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="container">
-      
-        <nav>
-            <div class="main">
-                <img src="./image/580b57fcd9996e24bc43c529 1 (1).png" alt="">
-                <div class="main-a">
-                <select name="" id="far">
-                    <option value="">Language</option>
-                    <option value="">English</option>
-                    <option value="">Urdu</option>
-                    <option value="">hindi</option>
-                </select>
-               <a href="#sign-in">Sign In</a>
-                </div>
+
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#home" class="logo-link">
+                    <img src="./image/netflix_logo.svg" alt="Netflix" class="logo" onerror="this.src='./image/580b57fcd9996e24bc43c529 1 (1).png'">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                </ul>
             </div>
-            <div class="main-b">
-                <h1>Unlimited Movies, TV Shows And More</h1>
-                <p>Watch anywhere. Cancel anytime.</p><br>
-                <p id="paragrap">Ready to watch? Enter your email to create or restart you membership.</p>
-                <div class="far1">
-                    <input type="search" name="search" placeholder="Email Address">
-                    <button>Get Starts></button>
+
+            <div class="nav-right">
+                <div class="nav-search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="movie-search-input" placeholder="Search titles...">
                 </div>
+                <div class="lang-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="lang-select">
+                        <option value="en">English</option>
+                        <option value="ur">Urdu</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
+                <a href="#login" class="btn btn-red" id="nav-login-btn">Login</a>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <header class="header" id="home">
+        <div class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-fire"></i> TOP STREAMING ENTERTAINMENT
+            </div>
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h3>Watch anywhere. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            
+            <form class="email-form" id="hero-form">
+                <input type="email" id="hero-email" placeholder="Email address" required>
+                <button type="submit" class="btn btn-red btn-lg">Get Started <i class="fa-solid fa-chevron-right"></i></button>
+            </form>
+        </div>
+        <div class="hero-curve"></div>
     </header>
-    <main>
-    <div class="container-a">
-        <div class="far2">
-        <h2>Enjoy The Movies On TV</h2>
-        <p>Watch the moives in a smart Tv or Mobile. <br> Like 
-        Screen app and other more thing. </p>
+
+    <div class="divider"></div>
+
+    <div id="about">
+        <section class="feature">
+            <div class="feature-text">
+                <h2>Enjoy on your TV</h2>
+                <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div class="feature-img">
+                <img src="./image/tv.png" alt="TV" onerror="this.src='./image/2.png'">
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="feature reverse">
+            <div class="feature-text">
+                <h2>Download your shows to watch offline</h2>
+                <p>Save your favorites easily and always have something to watch.</p>
+            </div>
+            <div class="feature-img">
+                <img src="./image/mobile_download.jpg" alt="Download" onerror="this.src='./image/iamge5.jpeg'">
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="feature">
+            <div class="feature-text">
+                <h2>Watch everywhere</h2>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+            <div class="feature-img">
+                <img src="./image/device_pile.png" alt="Devices" onerror="this.src='./image/OIP.jpeg'">
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="feature reverse">
+            <div class="feature-text">
+                <h2>Create profiles for kids</h2>
+                <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+            </div>
+            <div class="feature-img">
+                <img src="./image/kids.png" alt="Kids" onerror="this.src='./image/image14.jpeg'">
+            </div>
+        </section>
     </div>
-    <div class="image-a">
-        <img src="./image/2.png" alt="image">
-    </div>
-    </div>
-    <div class="container-b">
-        <div class="image-a">
-            <img src="./image/iamge5.jpeg" alt="image">
+
+    <div class="divider"></div>
+
+    <section class="movies-section" id="movies">
+        <div class="movies-title-bar">
+            <h2>Trending Now</h2>
+            <span class="trending-pill"><i class="fa-solid fa-arrow-trend-up"></i> Top 10 Today</span>
         </div>
-        <div class="far2">
-            <h2>Download The Movies Or Show To Watch Offline</h2>
-            <p>Save the Movies and Show or download and watch the free time and enjoy</p>
+        <div class="movies-carousel-wrapper">
+            <button class="slider-arrow left-arrow" id="slide-left" aria-label="Slide Left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="movies-row" id="movies-row">
+                <div class="movie-card" data-title="Stranger Things">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">1</span>
+                    <img src="./image/stranger_things_hd.jpg" alt="Stranger Things" onerror="this.src='./image/image10.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Money Heist">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">2</span>
+                    <img src="./image/money_heist_hd.jpg" alt="Money Heist" onerror="this.src='./image/image12.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Squid Game">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">3</span>
+                    <img src="./image/squid_game_hd.jpg" alt="Squid Game" onerror="this.src='./image/image13.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Wednesday">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">4</span>
+                    <img src="./image/wednesday_hd.jpg" alt="Wednesday" onerror="this.src='./image/image17.jpeg'">
+                </div>
+                <div class="movie-card" data-title="The Witcher">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">5</span>
+                    <img src="./image/witcher_hd.jpg" alt="The Witcher" onerror="this.src='./image/image15.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Peaky Blinders">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">6</span>
+                    <img src="./image/peaky_blinders_hd.jpg" alt="Peaky Blinders" onerror="this.src='./image/image16.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Arcane">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">7</span>
+                    <img src="./image/arcane_hd.jpg" alt="Arcane" onerror="this.src='./image/image14.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Breaking Bad">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">8</span>
+                    <img src="./image/breaking_bad_hd.jpg" alt="Breaking Bad" onerror="this.src='./image/image8.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Interstellar">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">9</span>
+                    <img src="./image/interstellar_hd.jpg" alt="Interstellar" onerror="this.src='./image/8.jpeg'">
+                </div>
+                <div class="movie-card" data-title="Extraction">
+                    <span class="card-badge">TOP 10</span>
+                    <span class="rank">10</span>
+                    <img src="./image/extraction_hd.jpg" alt="Extraction" onerror="this.src='./image/iamge5.jpeg'">
+                </div>
+            </div>
+            <button class="slider-arrow right-arrow" id="slide-right" aria-label="Slide Right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
-    </div>
-    </main>
-    <section class="container-c">
-        <h1>Movies Section</h1>
-        <div class="main-d">
-            <div class="far4">
-            <img src="./image/image10.jpeg" alt="">
-            <p>1</p>
+        <p id="no-movies-msg" style="display:none; text-align:center; color:#999; margin-top:20px; font-size:1.1rem;">No matching titles found.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-btn">What is Netflix? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-ans">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">How much does Netflix cost? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-ans">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $6.99 to $22.99 a month.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">Where can I watch? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-ans">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any connected device.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">How do I cancel? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-ans">
+                    <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">What can I watch on Netflix? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-ans">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.</p>
+                </div>
+            </div>
         </div>
-            <div class="far4">
-            <img src="./image/image12.jpeg" alt="">
-            <p>2</p>
-        </div>
-            <div class="far4">
-            <img src="./image/image13.jpeg" alt="">
-            <p>3</p>
-        </div>
-            <div class="far4">
-            <img src="./image/image17.jpeg" alt="">
-            <p>4</p>
-        </div>
-            <div class="far4">
-            <img src="./image/image15.jpeg" alt="">
-            <p>5</p>
-        </div>
-            <div class="far4">
-            <img src="./image/image16.jpeg" alt="">
-            <p>6</p>
-        </div>
+
+        <p class="faq-cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
+        <form class="email-form" id="faq-form">
+            <input type="email" id="faq-email" placeholder="Email address" required>
+            <button type="submit" class="btn btn-red btn-lg">Get Started <i class="fa-solid fa-chevron-right"></i></button>
+        </form>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="signin-section" id="login">
+        <div class="signin-box">
+            <h2>Login</h2>
+            <form id="signin-form">
+                <div class="input-group">
+                    <input type="email" id="signin-email" placeholder="Email or phone number" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-red btn-block">Login</button>
+                <div class="form-help">
+                    <label><input type="checkbox" checked> Remember me</label>
+                    <a href="#">Need help?</a>
+                </div>
+            </form>
+            <div class="signin-footer">
+                <p>New to Netflix? <a href="#">Sign up now</a>.</p>
+            </div>
         </div>
     </section>
-    <section class="container-d" id="sign-in">
-        <div id="#">
-            <div class="form" >
-                <h2>Sign Up</h2>
-                <label for="">Email</label>
-                <input type="email" name="full_name"placeholder="Enter your emial" required><br>            
-                <label for="">Password</label>
-                <input type="password" name="name" placeholder="Enter your password" required><br>
-                <label for="">Conform Password</label>
-                <input type="password" name="name" placeholder="Enter your Conform password" required><br>
-                <button>Submit</button>
-        </div>
-        </div>
-    </section>
-    <footer>
-        <div class="far5">
-            <div class="her">
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-top-text">Questions? Call <a href="tel:000-800-919-1694">000-800-919-1694</a></p>
+            
+            <div class="footer-links">
                 <ul>
-                    <li>FAQ</li>
-                    <li>Invesior</li>
-                    <li>Privacy</li>
-                    <li>Seppd Test</li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Media Center</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Ad Choices</a></li>
                 </ul>
             </div>
-            <div class="her">
-                <ul>
-                    <li>Help Center</li>
-                    <li> Jobs</li>
-                    <li>Cookie</li>
-                    <li>Legal Notice</li>
-                </ul>
-            </div>          
+
+            <p class="copyright">Netflix Clone &copy; 2026</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
