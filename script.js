@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (signinForm) {
         signinForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert(`Welcome! Logged in successfully with ${signinEmail.value}`);
+            const userName = document.getElementById('signin-name')?.value || 'Guest';
+            alert(`Welcome, ${userName}! You now have full demo access to explore the catalog.`);
             signinForm.reset();
         });
     }
