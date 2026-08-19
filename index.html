@@ -242,26 +242,27 @@
 
     <section class="signin-section" id="login">
         <div class="signin-box">
-            <h2>Guest Demo Access</h2>
+            <h2>Sign In</h2>
             <div class="demo-warning-note">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Interactive Student Portfolio Demo &bull; Free instant preview</span>
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Educational Demo &bull; Enter any test credentials</span>
             </div>
             <form id="signin-form">
                 <div class="input-group">
-                    <input type="text" id="signin-name" placeholder="Your Name" required>
+                    <input type="email" id="signin-email" placeholder="Email or phone number" required>
                 </div>
-                <div class="input-group">
-                    <input type="email" id="signin-email" placeholder="Email Address (e.g. user@example.com)" required>
+                <div class="input-group password-group">
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                    <i class="fa-solid fa-eye-slash toggle-password" id="toggle-password" title="Show/Hide Password"></i>
                 </div>
-                <button type="submit" class="btn btn-red btn-block">Explore Full Catalog</button>
+                <button type="submit" class="btn btn-red btn-block">Sign In</button>
                 <div class="form-help">
-                    <label><input type="checkbox" checked> Receive movie updates</label>
-                    <a href="#movies">Browse Movies</a>
+                    <label><input type="checkbox" checked> Remember me</label>
+                    <a href="#home">Need help?</a>
                 </div>
             </form>
             <div class="signin-footer">
-                <p>Front-End Web Development Portfolio by Farman.</p>
+                <p>New to Netflix? <a href="#home">Sign up now</a>.</p>
             </div>
         </div>
     </section>

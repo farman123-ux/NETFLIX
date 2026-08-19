@@ -697,6 +697,30 @@ img {
     margin-bottom: 16px;
 }
 
+.password-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-group input {
+    padding-right: 44px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    color: #a0a0a0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.toggle-password:hover {
+    color: #ffffff;
+}
+
 .input-group input {
     width: 100%;
     padding: 13px 16px;

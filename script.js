@@ -113,12 +113,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroForm) heroForm.addEventListener('submit', (e) => handleGetStarted(e, 'hero-email'));
     if (faqForm) faqForm.addEventListener('submit', (e) => handleGetStarted(e, 'faq-email'));
 
+    const togglePassword = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('signin-password');
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            togglePassword.classList.toggle('fa-eye', isPassword);
+            togglePassword.classList.toggle('fa-eye-slash', !isPassword);
+        });
+    }
+
     if (signinForm) {
         signinForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const userName = document.getElementById('signin-name')?.value || 'Guest';
-            alert(`Welcome, ${userName}! You now have full demo access to explore the catalog.`);
+            const email = signinEmail.value || 'User';
+            alert(`Demo Sign In Successful! Welcome back, ${email}`);
             signinForm.reset();
+            if (passwordInput && togglePassword) {
+                passwordInput.type = 'password';
+                togglePassword.classList.remove('fa-eye');
+                togglePassword.classList.add('fa-eye-slash');
+            }
         });
     }
 
