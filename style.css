@@ -93,8 +93,59 @@ img {
     width: 100%;
 }
 
+.portfolio-disclaimer {
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    padding: 7px 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1002;
+}
+
+.portfolio-disclaimer strong {
+    color: #38bdf8;
+}
+
+.portfolio-disclaimer i {
+    color: #38bdf8;
+}
+
+.clone-badge {
+    background: #e50914;
+    color: #ffffff;
+    font-size: 0.62rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.demo-warning-note {
+    background: rgba(234, 179, 8, 0.12);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    color: #fef08a;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;

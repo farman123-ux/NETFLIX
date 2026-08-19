@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Netflix UI Clone | Educational Portfolio Project</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap"
         rel="stylesheet">
@@ -16,12 +14,18 @@
 
 <body>
 
+    <div class="portfolio-disclaimer">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Educational Demo:</strong> This is a student portfolio project for learning purposes. Not affiliated with or endorsed by Netflix.</span>
+    </div>
+
     <nav class="navbar" id="main-nav">
         <div class="nav-container">
             <div class="nav-left">
                 <a href="#home" class="logo-link">
-                    <img src="./image/netflix_logo.svg" alt="Netflix" class="logo"
+                    <img src="./image/netflix_logo.svg" alt="Netflix Clone Demo" class="logo"
                         onerror="this.src='./image/580b57fcd9996e24bc43c529 1 (1).png'">
+                    <span class="clone-badge">DEMO</span>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
@@ -238,22 +242,26 @@
 
     <section class="signin-section" id="login">
         <div class="signin-box">
-            <h2>Login</h2>
+            <h2>Demo Sign In</h2>
+            <div class="demo-warning-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Demo Preview &bull; Do not enter real account passwords</span>
+            </div>
             <form id="signin-form">
                 <div class="input-group">
-                    <input type="email" id="signin-email" placeholder="Email or phone number" required>
+                    <input type="email" id="signin-email" placeholder="Demo Email (e.g. user@example.com)" required>
                 </div>
                 <div class="input-group">
-                    <input type="password" id="signin-password" placeholder="Password" required>
+                    <input type="password" id="signin-password" placeholder="Demo Password (any text)" required>
                 </div>
-                <button type="submit" class="btn btn-red btn-block">Login</button>
+                <button type="submit" class="btn btn-red btn-block">Demo Login</button>
                 <div class="form-help">
                     <label><input type="checkbox" checked> Remember me</label>
                     <a href="#">Need help?</a>
                 </div>
             </form>
             <div class="signin-footer">
-                <p>New to Netflix? <a href="#">Sign up now</a>.</p>
+                <p>Educational Front-End Portfolio Demonstration.</p>
             </div>
         </div>
     </section>
@@ -289,7 +297,7 @@
                 </ul>
             </div>
 
-            <p class="copyright">Netflix Clone &copy; 2026</p>
+            <p class="copyright">Educational Portfolio Project &copy; 2026. Built for learning purposes (Not affiliated with Netflix).</p>
         </div>
     </footer>
 
